@@ -1,20 +1,20 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
-import { GestureHanflerRootView } from "react-native-gesture-handler";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
-import { AppNavigation } from "../navigation/AppNavigation.js";
-//Compponente da raiz do pp, monte a parte de React Navigation e abstrai os provedores da área
+import { AppNavigation } from "./navigation/AppNavigation.js";
+// Componente raiz do app: monta o React Navigation e abstrai os provedores de área segura e gestos.
 
 export default function App() {
   return (
-    <GestureHanflerRootView style={{ flex: 1 }}>
+    <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
         <NavigationContainer>
           <StatusBar style="dark" />
           <AppNavigation />
         </NavigationContainer>
       </SafeAreaProvider>
-    </GestureHanflerRootView>
+    </GestureHandlerRootView>
   );
 }
